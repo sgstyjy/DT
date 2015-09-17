@@ -1,0 +1,24 @@
+J2EE-based Implementation of the TPC-W Benchmark
+------------------------------------------------
+
+New York University (NYU)
+Parallel and Distributed Systems Group (PDSG)
+Developed by: Alexander A. Totok (totok@cs.nyu.edu)
+
+Redistribution and use in source and binary forms, with or without modification, are permitted 
+provided that the following condition is met:
+
+ * Neither the name of New York University (NYU) nor the names of its contributors may be 
+used to endorse or promote products derived from this software without specific prior 
+written permission.
+
+This software is provided by NYU and the contributors on an "as is" basis, without 
+any representations or warranties of any kind, express or implied including, but not 
+limited to, representations or warranties of non-infringement, merchantability or 
+fitness for a particular purpose. In no event shall NYU or contributors be liable for 
+any direct, indirect, incidental, special, exemplary, or consequential damages 
+(including, but not limited to, procurement of substitute goods or services; loss of use, 
+data, or profits; or business interruption) however caused and on any theory of liability, 
+whether in contract, strict liability, or tort (including negligence or otherwise) arising in 
+any way out of the use of this software, even if advised of the possibility of such 
+damage.
