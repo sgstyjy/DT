@@ -1,0 +1,255 @@
+execute  vt. 执行；处死，处决；履行；完成
+cheese 奶酪
+intended 有意的，预期的；已订婚者
+deliberate 故意的，蓄意的，慎重的；vt. 权衡 vi. 熟虑，商讨
+etc.  注意读音   全写为：etcetera
+distract 使分心，使混乱
+skim v. 略读，撇去，adj. 脱脂的，撇去浮沫的；n. 撇，撇去的东西
+skip vi. 跳绳，跳；vt. 略过，跳过，漏过；n. 跳，蹦跳
+preview  review
+excessively adv. 过度地，过分地，极度地
+set aside  把...放置一旁，不理会，取消，留出
+look over 把...看一遍，过目，翻阅
+go over 复习
+the Atlantic 大西洋     transatlantic 横渡大西洋的
+lung 肺
+voyage  n. 航海，航行
+steer  vt. vi. 驾驶，操纵，控制，引导；n. 阉公牛
+gale 大风
+dissuade  vt. 劝阻，劝止，劝戒      persuade vt. vi. 劝说，说服，使相信
+rough adj. 粗糙的，粗鲁的，狂暴的， vt. 粗暴地对待，使粗糙
+tough adj. 坚强的，坚韧的，不屈不挠的，困难的   n.粗暴的人，暴徒  vt. 忍耐，忍受
+knight n. 武士，骑士  vt. 封为爵士
+set out 动身，出发，着手，安排
+by oneself 独立地，单独
+prime minister 总理，首相
+dozen 一打，十二个，adj. 一打的
+notable 值得注意的，显著的；n. 名人，显要人物
+I would not want to take you out of your way. 我不想让你绕路。
+capital punishment，death penalty 死刑
+upper case， lower case  大小写字母
+descendent  n.后裔，子孙； adj. 下降的，降落的，祖传的
+associate 使发生联系，使联合，n.合伙人，伴侣；adj. 联合的，合伙的，非正式的
+resist 抵抗，抗拒，反对，抵制。 n. 防染剂，防腐剂。  insist vt.&vi.坚持，强调，坚持要求，坚决认为
+in spite of 尽管
+rare 罕见的
+cheek 面颊
+bunch 一串，一束
+slipper  拖鞋
+parcel 包裹
+flutter 飘动
+tremble  颤抖
+pasttime  消遣，娱乐
+literate  有文化修养的， n. 识字的人，有学问的人
+come up with  提出
+at first glance   乍一看，初看
+merry 欢乐的，愉快的
+pessimistic 悲观的
+逗号（comma），句号（period），中横线（hyphen），下划线（underline），下横线（underscore），斜线（slash），反斜线（backslash），单引号（single quotes），双引号（double quotes）
+floppy adj. 松软的，懒散的  n. 软盘
+proactive 积极主动的，主动出击的
+boot 长筒靴
+stocking 长袜   sock 短袜
+chimney 烟囱
+kneel 跪下
+indignant 气愤的
+weep 流泪
+lest 唯恐， 万一
+broken-hearted 心碎的，极其伤心的
+fireplace 壁炉
+stable 马厩
+rude 不礼貌的，粗鲁的
+catch sight of 看到
+break into 突然想起
+neat 整洁的
+bossy  爱指挥的，专横的
+whatsoever
+absent-minded 心不在焉的
+compliment 问候
+go on strike  罢工
+sample vt. 品尝，抽样调查
+sampler 取样器，采样器
+limp 跛行
+eagerly  渴望地，热切地
+heavy 油腻不容易消化的
+sting  刺，刺激
+benevolent   仁慈的，好心肠的
+worn 破烂的，损坏的
+unsay  vt. 收回（说过的话），取消
+out of place 不适当的
+count out 逐一数出
+niece 侄女，外甥女
+nephew 侄子，外甥
+distort vt. 歪曲，扭曲，曲解 vi. 扭曲，变形
+repetition 重复，反复，副本，复制品  repeat
+reception 接待，欢迎，招待会   receive vt. 接到，收到，接纳，接待
+smooth 光滑的，流畅的；vt. 使平滑，排除 n. 平地，平面
+swiftly  迅速地，敏捷地
+disgrace  n. 丢脸，耻辱，不光彩的事 vt. 使丢脸，使受耻辱
+hold oneself in 控制，约束
+philosopher 哲学家
+stun 使目瞪口呆
+glue 胶合，紧附于；n. 胶水，胶粘物
+statute 法令，法规，条例
+Theology 神学
+relief sculpture 浮雕
+adorn 装饰，修饰
+sovereign n.君主，最高统治者； adj. 独立自主的，至高无上的
+reign vi,vt 当政，统治 n.任期，当政期
+jurisdiction n.司法权，管辖权，权限
+detention n.拘留，扣押
+
+初始化：$ git init
+
+添加文件到仓库：$ git add readme.txt
+添加所有文件：$ git add --all
+
+提交到仓库：$ git commit -m "wrote a readme file"
+
+如果想删除已经commit的文件：$git rm --cached *.txt
+
+查看运行状态：$ git status
+
+查看修改的内容：$ git diff readme.txt
+
+查看日志：$ git log或$ git log --pretty=oneline
+
+回退到上一版本：$ git reset --hard HEAD^
+
+指定回退到某个时刻：$ git reset --hard <commit id>
+
+丢弃工作区的修改：$ git checkout -- readme.txt
+
+丢弃暂存区的修改：$ git reset HEAD readme.txt
+
+删除版本库中文件：$ git rm test.txt    $ git commit -m "remove test.txt"
+
+从版本库中恢复误删的文件：$ git checkout -- test.txt
+
+添加到远程仓库：$git remote add origin https://github.com/sgstyjy/dm.git
+   $git push -u origin master （第一次推送时，加上-u参数，后面的推送不用添加）。
+
+推送指定分支到远程库：$ git push origin dev
+
+从远程库克隆：$ git clone https://github.com/sgstyjy/dm.git
+
+创建分支：$ git checkout -b dev （-b参数表示创建分支，相当于以下两条命令：$ git branch dev，$ git checkout dev）
+
+查看当前的分支：$ git branch （标*号的为当前分支）
+
+切换分支：$ git checkout master
+
+将dev分支的成果合并到master分支上，在master分支上运行：$ git merge dev
+合并后就可以删除dev分支：$ git branch -d dev
+
+暂存当前分支的工作现场，切换到其他分支：$ git stash
+
+查看暂存的工作现场：$ git stash list
+
+恢复工作现场：一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；另一种方式是用git stash pop，恢复的同时把stash内容也删了。
+
+错误调试：
+error:src refspec master does not match any 
+引起该错误的原因是，目录中没有文件，空目录是不能提交上去的 
+execute  vt. 执行；处死，处决；履行；完成
+cheese 奶酪
+intended 有意的，预期的；已订婚者
+deliberate 故意的，蓄意的，慎重的；vt. 权衡 vi. 熟虑，商讨
+etc.  注意读音   全写为：etcetera
+distract 使分心，使混乱
+skim v. 略读，撇去，adj. 脱脂的，撇去浮沫的；n. 撇，撇去的东西
+skip vi. 跳绳，跳；vt. 略过，跳过，漏过；n. 跳，蹦跳
+preview  review
+excessively adv. 过度地，过分地，极度地
+set aside  把...放置一旁，不理会，取消，留出
+look over 把...看一遍，过目，翻阅
+go over 复习
+the Atlantic 大西洋     transatlantic 横渡大西洋的
+lung 肺
+voyage  n. 航海，航行
+steer  vt. vi. 驾驶，操纵，控制，引导；n. 阉公牛
+gale 大风
+dissuade  vt. 劝阻，劝止，劝戒      persuade vt. vi. 劝说，说服，使相信
+rough adj. 粗糙的，粗鲁的，狂暴的， vt. 粗暴地对待，使粗糙
+tough adj. 坚强的，坚韧的，不屈不挠的，困难的   n.粗暴的人，暴徒  vt. 忍耐，忍受
+knight n. 武士，骑士  vt. 封为爵士
+set out 动身，出发，着手，安排
+by oneself 独立地，单独
+prime minister 总理，首相
+dozen 一打，十二个，adj. 一打的
+notable 值得注意的，显著的；n. 名人，显要人物
+I would not want to take you out of your way. 我不想让你绕路。
+capital punishment，death penalty 死刑
+upper case， lower case  大小写字母
+descendent  n.后裔，子孙； adj. 下降的，降落的，祖传的
+associate 使发生联系，使联合，n.合伙人，伴侣；adj. 联合的，合伙的，非正式的
+resist 抵抗，抗拒，反对，抵制。 n. 防染剂，防腐剂。  insist vt.&vi.坚持，强调，坚持要求，坚决认为
+in spite of 尽管
+rare 罕见的
+cheek 面颊
+bunch 一串，一束
+slipper  拖鞋
+parcel 包裹
+flutter 飘动
+tremble  颤抖
+pasttime  消遣，娱乐
+literate  有文化修养的， n. 识字的人，有学问的人
+come up with  提出
+at first glance   乍一看，初看
+merry 欢乐的，愉快的
+pessimistic 悲观的
+逗号（comma），句号（period），中横线（hyphen），下划线（underline），下横线（underscore），斜线（slash），反斜线（backslash），单引号（single quotes），双引号（double quotes）
+floppy adj. 松软的，懒散的  n. 软盘
+proactive 积极主动的，主动出击的
+boot 长筒靴
+stocking 长袜   sock 短袜
+chimney 烟囱
+kneel 跪下
+indignant 气愤的
+weep 流泪
+lest 唯恐， 万一
+broken-hearted 心碎的，极其伤心的
+fireplace 壁炉
+stable 马厩
+rude 不礼貌的，粗鲁的
+catch sight of 看到
+break into 突然想起
+neat 整洁的
+bossy  爱指挥的，专横的
+whatsoever
+absent-minded 心不在焉的
+compliment 问候
+go on strike  罢工
+sample vt. 品尝，抽样调查
+sampler 取样器，采样器
+limp 跛行
+eagerly  渴望地，热切地
+heavy 油腻不容易消化的
+sting  刺，刺激
+benevolent   仁慈的，好心肠的
+worn 破烂的，损坏的
+unsay  vt. 收回（说过的话），取消
+out of place 不适当的
+count out 逐一数出
+niece 侄女，外甥女
+nephew 侄子，外甥
+distort vt. 歪曲，扭曲，曲解 vi. 扭曲，变形
+repetition 重复，反复，副本，复制品  repeat
+reception 接待，欢迎，招待会   receive vt. 接到，收到，接纳，接待
+smooth 光滑的，流畅的；vt. 使平滑，排除 n. 平地，平面
+swiftly  迅速地，敏捷地
+disgrace  n. 丢脸，耻辱，不光彩的事 vt. 使丢脸，使受耻辱
+hold oneself in 控制，约束
+philosopher 哲学家
+stun 使目瞪口呆
+glue 胶合，紧附于；n. 胶水，胶粘物
+statute 法令，法规，条例
+Theology 神学
+relief sculpture 浮雕
+adorn 装饰，修饰
+sovereign n.君主，最高统治者； adj. 独立自主的，至高无上的
+reign vi,vt 当政，统治 n.任期，当政期
+jurisdiction n.司法权，管辖权，权限
+detention n.拘留，扣押
+
+
