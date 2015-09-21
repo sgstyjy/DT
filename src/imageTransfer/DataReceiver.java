@@ -25,6 +25,8 @@ public class DataReceiver extends Thread {
 		int receivesum = 0;
         try 
         {
+        	int i = sin.readInt();
+        	System.out.println("The blocknum is: "+i);
            receive_length = sin.read(bb, 0, Constant.TRANSFER_BUFFER);
            while(receive_length>0){
         	   sout.write(bb, 0, receive_length);

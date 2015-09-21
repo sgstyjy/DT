@@ -40,17 +40,21 @@ class DataSender extends Thread
 	public void run()
 	{
 		byte[] bb = new byte[Constant.TRANSFER_BUFFER];
+		int i =0;
 		int sendsum =0;
 		int send_length = 0;
 		try {
 			send_length = cin.read(bb, 0, Constant.TRANSFER_BUFFER);
 			while(send_length>0){
+				cout.write(i);
 				cout.write(bb, 0, send_length);
 				cout.flush();
 				sendsum += send_length;
 				send_length=cin.read(bb, 0, Constant.TRANSFER_BUFFER);
+				i++;
 			}
 			socket.close();
+			System.out.println("The data blocks are:"+i);
 			System.out.println("The data amount of is:"+sendsum);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
