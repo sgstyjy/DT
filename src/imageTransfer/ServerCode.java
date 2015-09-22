@@ -16,22 +16,24 @@ public class ServerCode
        Long starttime = date.getTime();
        try 
        {
-           for(;;)                          
-           {
+          // for(;;)                          
+           //{
               //阻塞,直到有客户端连接
               Socket socket = s.accept();
               //通过构造函数，启动线程
               new DataReceiver(socket);
-           }
+              
+              s.close();
+              //读取结束时间
+              Date date1 = new Date();
+              Long endtime = date1.getTime();
+              Long duration = endtime-starttime;
+              System.out.println("The receive time of is:"+duration);
+         //  }
        }
        finally 
        {
-          s.close();
-          //读取结束时间
-          Date date1 = new Date();
-          Long endtime = date1.getTime();
-          Long duration = endtime-starttime;
-          System.out.println("The receive time of is:"+duration);
+             return;
        }
    }
 }

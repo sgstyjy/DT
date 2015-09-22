@@ -15,14 +15,15 @@ class DataSender extends Thread
 	//线程统计数，用来给线程编号
     int cid = Constant.CLIENT_ID++;
 	private DataOutputStream cout;
-	private FileInputStream cin;
+	//private FileInputStream cin;
+	RandomAccessFile cin;
 	//构造函数
 	public DataSender(InetAddress addr, int port) throws IOException, BiffException 
 	{
 		//实例化IO对象 
 		//File file_in = new File(Constant.FILE_IN);
 		//cin = new FileInputStream(file_in);    
-		RandomAccessFile cin = new RandomAccessFile(Constant.FILE_IN,"r");
+		cin = new RandomAccessFile(Constant.FILE_IN,"r");
 		long size = cin.length();
 		System.out.println("The length of original file is: "+ size);
 		
@@ -30,18 +31,8 @@ class DataSender extends Thread
 		socket.setSoTimeout(6000);
 		cout = new DataOutputStream(socket.getOutputStream());
 		
-		//读取开始时间
-		Date date = new Date();
-		Long starttime = date.getTime();
-		
 		//开启线程
 		start();
-		
-		//读取结束时间
-		Date date1 = new Date();
-		Long endtime = date1.getTime();
-		Long duration = endtime-starttime;
-		System.out.println("The send time of "+ cid +" is:"+duration);
      }
   
 	//线程主体方法
@@ -49,7 +40,8 @@ class DataSender extends Thread
 	{
 		byte[] bb = new byte[Constant.TRANSFER_BUFFER];
 		int i =0;
-		int sendsum =0;
+		int sendbytes =0;
+		int sendblocks = 0;
 		int send_length = 0;
 		try {
 				//读取相似度表
@@ -57,26 +49,30 @@ class DataSender extends Thread
 				//InputStream hashtable2 = new FileInputStream(file_in2);
 				Workbook book = Workbook.getWorkbook(file_in2);
 				Sheet sheet = book.getSheet(0);
-		
-	    		while(i<Constant.TOTALBLOCKS){
+		       
+				//read the items in compare result table, get the block numbers, and send the data 
+	    		while(i<Constant.TOTALBLOCKS_4K){
 	    					String tempstr = sheet.getCell(i/Constant.COLUMNS, i%Constant.COLUMNS).getContents();
-	    					if(tempstr!=null){
+	    					if(!tempstr.equals("A") ){
 	    						    long templ = Long.parseLong(tempstr);
-	    						    cin
+	    						    cin.seek(templ*Constant.TRANSFER_BUFFER);
+	    						    send_length = cin.read(bb, 0, Constant.TRANSFER_BUFFER);
+		    						cout.write(bb, 0, send_length);
+		    						cout.flush();
+		    						sendbytes += send_length;
+		    						sendblocks++;
+		    						send_length=cin.read(bb, 0, Constant.TRANSFER_BUFFER);
+		    						i++;
 	    					}
-	    					send_length = cin.read(bb, 0, Constant.TRANSFER_BUFFER);
-	    					while(send_length>0){
-	    							//cout.write( intToByteArray(i));
-	    							cout.write(bb, 0, send_length);
-	    							cout.flush();
-	    							sendsum += send_length;
-	    							send_length=cin.read(bb, 0, Constant.TRANSFER_BUFFER);
-	    							i++;
-	    					}
-				socket.close();
-				System.out.println("The data blocks are:"+i);
-				System.out.println("The data amount of is:"+sendsum);
-			}
+	    					else
+	    						i++;	
+			    }
+	    		socket.close();
+	    		cin.close();
+	    		cout.close();
+	    		System.out.println("The total blocks are:"+i );
+				System.out.println("The send data blocks are:"+sendblocks);
+				System.out.println("The data amount of is [in bytes]:"+sendbytes);
 		} catch (IOException | BiffException e) {
 			e.printStackTrace();
 		}
