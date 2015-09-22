@@ -12,14 +12,14 @@ public class ClientCode
           InetAddress addr = InetAddress.getByName("localhost");
          System.out.println("The outputs are from the Client: ");
       
-	    //读取开始时间
+	    //read the start time
 		 Date date = new Date();
 	    Long starttime = date.getTime();
 		
           //for(threadNo = 0;threadNo<3;threadNo++)
            new DataSender(addr,Constant.PORT1);
            
-   		//读取结束时间
+   		//read the end time
    		Date date1 = new Date();
    		Long endtime = date1.getTime();
    		Long duration = endtime-starttime;
